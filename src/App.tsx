@@ -1,8 +1,8 @@
-import {  Box, Flex, Grid, GridItem, HStack, Show } from '@chakra-ui/react'
+import {  Box, Flex, Grid, GridItem, Show } from '@chakra-ui/react'
 import NavBar from './components/NavBar'
 import GameGrid from './components/GameGrid'
 import GenreList from './components/GenreList'
-import { SetStateAction, useState } from 'react'
+import {  useState } from 'react'
 import { Genre } from './hook/useGenres'
 import PlatformSelector from './components/PlatformSelector'
 import { Platform } from './hook/useGames'
@@ -53,10 +53,14 @@ const App = () => {
           <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({...gameQuery, sortOrder})} />
           </Flex>
         </Box>
-        <GameGrid gameQuery={gameQuery} selectedPlatform={gameQuery.platform} selectedGenre={gameQuery.genre} />
+        <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
   )
 }
 
 export default App
+
+
+// it problem accure the below code should write in the GameGrid 
+//  selectedPlatform={gameQuery.platform}  selectedGenre={gameQuery.genre} 

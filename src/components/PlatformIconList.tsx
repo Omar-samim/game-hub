@@ -4,7 +4,6 @@ import {
   FaWindows,
   FaPlaystation,
   FaXbox,
-  FaApple,
   FaLinux,
   FaAndroid,
 } from "react-icons/fa";
